@@ -5,7 +5,25 @@
   and no taxes.*/
 
 #include <stdio.h>
+#define MUFFINUNITPRICE .80
+#define TAXRATE 0.13
 
 int main(void){
+   int numMuffins;
+   float cost;
+   /*ask user for number of muffins they wish to buy*/
+   printf("Enter the number of muffins you wish to buy: ");
+   scanf("%d",&numMuffins);
+
+   /*calculate the cost of the muffins*/
+   cost = numMuffins * MUFFINUNITPRICE;
+
+   /*add tax of neccessary*/
+   if(numMuffins < 6){ 
+     cost = cost + TAXRATE*cost;
+   }   
+
+   /*print out the result*/
+   printf("your muffins cost: $%.2lf\n",cost);
 }
 
