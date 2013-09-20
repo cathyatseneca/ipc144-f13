@@ -14,7 +14,11 @@ int main(void){
    /*ask user for number of muffins they wish to buy*/
    printf("Enter the number of muffins you wish to buy: ");
    scanf("%d",&numMuffins);
-
+   while(numMuffins <= 0){
+     printf("you need to enter a positive value.\n");
+     printf("Enter the number of muffins you wish to buy: ");
+     scanf("%d",&numMuffins);
+   }
    /*calculate the cost of the muffins*/
    cost = numMuffins * MUFFINUNITPRICE;
 
