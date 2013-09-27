@@ -1,0 +1,1 @@
+int validate(int min,int max);
