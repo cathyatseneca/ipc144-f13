@@ -8,7 +8,7 @@
   that information
 */
 
-void getChange(int amt,int* numLoonies, int* numToonies,
+void getChange(int amt,int* numToonies, int* numLoonies,
 			int* numQuarters,int* numDimes, int* numNickels){
 
 }
@@ -22,10 +22,10 @@ int main(void){
 
   printf("enter the number of cents to make change for: ");
   scanf("%d",&numCents);
-  getChange(numCents,&loonies,&toonies,&quarters,&dimes,&nickels);
+  getChange(numCents,&toonies,&loonies,&quarters,&dimes,&nickels);
   printf("Change is:\n");
-  printf("  loonies: %d\n",loonies);    
   printf("  toonies: %d\n",toonies);    
+  printf("  loonies: %d\n",loonies);    
   printf("  quarter: %d\n",quarter);    
   printf("  dimes: %d\n",dimes);    
   printf("  nickels: %d\n",nickels);    
