@@ -1,7 +1,7 @@
 /*this function passed a monetary value in cents and it rounds that money to 
   the nearest nickel according to the rules.  That is for values ending with
   1,2,6,7 round down, and 3,4,8,9 round up.  This value is returned*/
-int roundToNearestNickel(int amt){
+int nearestNickel(int amt){
 }
 /* this function is passed an int representing the amount of change
    we want to make, and we need to determine how many of each type
@@ -12,7 +12,7 @@ int roundToNearestNickel(int amt){
   pointers that hold the addresses of variable where we wish to store
   that information
 */
-void getChange(int amt,int* numToonies, int* numLoonies,
+void makeChange(int amt,int* numToonies, int* numLoonies,
 			int* numQuarters,int* numDimes, int* numNickels){
 
   //round amt to nearest nickel
