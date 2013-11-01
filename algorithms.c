@@ -41,6 +41,8 @@ int main(void){
       }
 
     }
+    printMenu();
+    choice = getChoice();
   }
 
 }
