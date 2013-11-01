@@ -21,11 +21,11 @@ int main(void){
   printMenu();
   choice = getChoice();
   while(choice != 'd'){
-    if(choice == 'b'){
+    if(choice == 'a'){
       sort(array,MAX);
     }
     else{
-      if(choice=='a'){
+      if(choice=='b'){
         printf("enter a key(number you are looking for): ");
         scanf("%d",&key);
         linearSearch(key,array,MAX);
