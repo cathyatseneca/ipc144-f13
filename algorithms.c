@@ -16,13 +16,14 @@ int main(void){
   int isSorted=0;
   genArray(array,MAX);
   printf("Welcome to the array algorithm testing program\n");
-  printf("Here is the array we are working with:\n");
-  print(array,MAX);
+    printf("Here is the array we are working with:\n");
+    print(array,MAX);
   printMenu();
   choice = getChoice();
   while(choice != 'd'){
     if(choice == 'a'){
       sort(array,MAX);
+      isSorted=1;
     }
     else{
       if(choice=='b'){
@@ -43,6 +44,8 @@ int main(void){
       }
 
     }
+    printf("Here is the array we are working with:\n");
+    print(array,MAX);
     printMenu();
     choice = getChoice();
   }
@@ -84,12 +87,37 @@ int linearSearch(int key, int array[],int sz){
   return rc;
 }
 int binarySearch(int key, int array[],int sz){
-  printf("not working yet\n");
-  return 0;
+  int low=0;       //index of the first element we are interested in
+  int high=sz-1;   //index of last element we are interested in
+  int mid;
+  int rc=-1;
+
+  while(rc==-1 && low<=high){
+    mid = (low+high)/2;
+    if(array[mid]==key){
+        rc=mid;
+    }
+    else if(array[mid]> key){
+        high=mid-1;
+    }
+    else{
+        low=mid+1;
+    }
+  }
+  return rc;
 }
 void sort(int array[],int sz){
-  printf("not working yet\n");
-
+    int i,j;
+    int tmp;
+    for(i=0;i<sz;i++){
+        for(j=0;j<sz-1-i;j++){
+           if(array[j] > array[j+1]){
+		tmp=array[j];
+                array[j]=array[j+1];
+                array[j+1]=tmp;
+           }
+        }
+    }
 }
 void printMenu(){
   printf("Please choose one of the following options: \n");
